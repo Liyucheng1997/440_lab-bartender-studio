@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>调酒教室</title>
+    <link rel="stylesheet" href="/src/tokens.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside class="card side" id="menu">
+        <header class="side-head">
+          <h1>调酒教室</h1>
+          <p class="muted">跟着调酒师学 11 款经典鸡尾酒</p>
+        </header>
+        <nav id="list" class="list"></nav>
+      </aside>
+
+      <main class="stage">
+        <canvas id="view"></canvas>
+        <div class="start" id="start">
+          <button class="btn btn-primary btn-lg" id="startBtn">开始调制</button>
+        </div>
+        <div class="hud">
+          <div class="card caption" id="caption">
+            <div class="caption-main">
+              <span class="caption-index tabular" id="capIndex"></span>
+              <span class="caption-text" id="capText">选择一款酒，然后点击“开始调制”</span>
+            </div>
+            <div class="caption-sub tabular" id="capSub"></div>
+          </div>
+          <div class="card controls">
+            <button class="btn" id="restart">重新开始</button>
+            <button class="btn btn-primary" id="toggle">开始</button>
+            <button class="btn" id="next" hidden>下一步</button>
+            <span class="sep"></span>
+            <div class="seg" id="mode">
+              <button data-v="auto" class="on">连续演示</button>
+              <button data-v="step">逐步学习</button>
+            </div>
+            <div class="seg" id="speed">
+              <button data-v="0.5">0.5×</button>
+              <button data-v="1" class="on">1×</button>
+              <button data-v="2">2×</button>
+            </div>
+            <button class="btn" id="mute">音效 开</button>
+          </div>
+        </div>
+      </main>
+
+      <aside class="card side panel" id="panel"></aside>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
