@@ -5,7 +5,7 @@ import { V, clamp, lerp, handBasis } from './util.js';
 /* 写实调酒师：微软 Rocketbox 人物库 Business_Male_06（MIT 授权），
  * 骨骼由本文件每帧驱动：脊柱前倾/转体、双臂两段 IK、手指抓握、头部注视、眨眼与微笑。 */
 
-const DIR = '/models/bartender/';
+const DIR = import.meta.env.BASE_URL + 'models/bartender/';
 const Qt = THREE.Quaternion;
 const _a = new Qt(), _b = new Qt(), _v1 = new THREE.Vector3(), _v2 = new THREE.Vector3();
 const X = V(1, 0, 0), Y = V(0, 1, 0);
